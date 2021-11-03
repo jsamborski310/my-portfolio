@@ -72,3 +72,14 @@ article h4 {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+/*MEDIA QUERY*/
+@media screen and (max-width:768px) {
+
+    section {
+        flex-direction: column;
+    }
+    aside h3 {
+        text-align: left;
+    }
+}
