@@ -41,40 +41,33 @@ aside h3 {
 .projects article {
     padding:10px;
 }
-article h4 {
-    color:coral;
-}
 article:first-child {
     width:100%;
 }
 article:not(:first-child) {
     flex:1 0 400px;
 }
-
-
-
 img {
     width:100%;
     height:auto;
 }
-
+article h4 {
+    color:coral;
+}
 
 /*POSITIONING OF PROJECT TITLE*/
 
-/*
+
 article {
-    position:relative;
+    position: relative;
 }
 article h4 {
     position:absolute;
-    bottom:0;
-    right:0;
+    bottom:50px;
 }
-*/
 
-/*
-article h4 {
-    justify-content: flex-end;
-    align-items: flex-end;
+/*CONTACT*/
+.right-content ul {
+    display: flex;
+    justify-content: center;
 }
-*/
