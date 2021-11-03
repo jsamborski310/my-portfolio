@@ -1,0 +1,80 @@
+* {
+    margin:0;
+    padding:0;
+}
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+li {
+    display:inline-block;
+}
+
+/*SUBTITLE*/
+.subtitle {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+/*LAYOUT*/
+section {
+    display: flex;
+}
+aside {
+    border-right: 2px solid black;
+    flex:1;
+}
+aside h3 {
+    text-align: right;
+}
+.right-content {
+    flex:3;
+}
+
+/*WORK*/
+.projects {
+    display:flex;
+    flex-wrap:wrap;
+}
+.projects article {
+    padding:10px;
+}
+article h4 {
+    color:coral;
+}
+article:first-child {
+    width:100%;
+}
+article:not(:first-child) {
+    flex:1 0 400px;
+}
+
+
+
+img {
+    width:100%;
+    height:auto;
+}
+
+
+/*POSITIONING OF PROJECT TITLE*/
+
+/*
+article {
+    position:relative;
+}
+article h4 {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+*/
+
+/*
+article h4 {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+*/
