@@ -31,21 +31,61 @@ li {
     font-size:14px;
     padding:0 20px;
     letter-spacing: 0.2em;
+    position:relative;
 }
+
+
 li a {
     color:#ffffff;
     text-decoration:none;
 }
+
+li:hover a:after {
+    content: ""; /* This section animates the hover.*/
+    display:block;
+    position:absolute;
+    top:10px;
+    border-radius: 50%;
+    background-color:#fa8072;
+    width:12px;
+    height:12px;
+    animation:infinite;
+    animation-name: slide;
+    animation-duration: 3s;
+    z-index: -1;
+}
+@keyframes slide {
+    0% {
+        left:0;
+        transform:translateX(0);
+    }
+    100% {
+        left:90%;
+        transform:translateX(-100%);
+    }
+}
+
+/* Testing navigation underline on hover
+
+li a:hover {
+    background: 
+    linear-gradient(to right, #fa8072, #fa8072);
+    background-size: 100% 0.5em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    animation: bgmve 2s infinite;
+}
+@keyframes bgmve {
+    to {background-position:0 0}
+}
+*/
+
+
 ul {
     height: 20px; /*Keeps from moving up when hovered*/
     margin:20px 0;
 }
 
-/*ADD MENU ITEM UNDERLINE ON HOVER
-
-li a:hover {
-}
-*/
 
 /*HERO
 Adds hero background image. Positions Subtitle.*/
@@ -53,9 +93,9 @@ Adds hero background image. Positions Subtitle.*/
 .hero {
     height:400px;
     background-image: url(/assets/images/coding-portfolio-background.png);
-    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
     display: flex;
     justify-content: flex-end;
@@ -143,3 +183,6 @@ article h4 {
         text-align: left;
     }
 }
+
+
+
