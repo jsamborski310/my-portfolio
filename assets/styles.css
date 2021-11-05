@@ -15,6 +15,9 @@ header {
     color:#fff;
     height:80px;
     align-items: center;
+    position:fixed;
+    width:100%;
+    z-index: 1;
 }
 header h1 {
     background-color:#fa8072;
@@ -48,11 +51,12 @@ li a:hover {
 Adds hero background image. Positions Subtitle.*/
 
 .hero {
-    height:300px;
+    height:400px;
     background-image: url(/assets/images/coding-portfolio-background.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
