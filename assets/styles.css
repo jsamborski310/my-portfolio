@@ -6,6 +6,10 @@
 header {
     display: flex;
     justify-content: space-between;
+    background-color:black;
+    color:#fff;
+    height:80px;
+    align-items: center;
 }
 li {
     display:inline-block;
@@ -45,7 +49,7 @@ article:first-child {
     width:100%;
 }
 article:not(:first-child) {
-    flex:1 0 400px;
+    flex:1 0 500px;
 }
 img {
     width:100%;
