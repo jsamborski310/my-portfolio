@@ -7,6 +7,23 @@ body {
     font-size:16px;
     line-height:1.5;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*ANCHOR SCROLL TO*/
+
+h3 { 
+    position:relative;
+ }
+
+h3 span { 
+    position:absolute; 
+    top:-100px;
+}
+
+
 /*HEADER*/
 header {
     display: flex;
@@ -87,6 +104,9 @@ li a:hover {
 }
 
 
+
+
+
 /*HERO
 Adds hero background image. Positions Subtitle.*/
 
@@ -124,9 +144,9 @@ aside {
 aside h3 {
     text-align: right;
     padding-right:20px;
-    font-size:3em;
+    font-size:2.5em;
     font-weight:900;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 .right-content {
     flex:3;
@@ -179,70 +199,145 @@ article h4 {
     section {
         flex-direction: column;
     }
+    aside {
+        border-right:none;
+    }
     aside h3 {
         text-align: left;
+        padding-left:25px;
     }
     .main-menu {
         display:none;
     }
-
-
-
-    /*MOBILE MENU*/
-    header {
-        position:relative;
-    }
-    .mobile-menu-icon {
-        display:flex;
-        justify-content: flex-end;
-        align-content:flex-end;
-        padding-right:30px;
-
+    .hero {
+        background-position: inherit;
     }
 
-/*HOVER EFFECT*/
-
-    .main-menu-section {
-        position:relative;
+    /*Mobile Menu*/
+    #mobileMenuToggle {
+    display: block;
+    position: relative;
+    top: 0; /*Position of the menu icon.*/
+    left: -20px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
     }
+    
+    #mobileMenuToggle a {
+    text-decoration: none;    
+    transition: color 0.3s ease;
+    }
+
+    #mobileMenuToggle a:hover {
+    color: #fa8072;
+    }
+
+    #mobileMenuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+    }
+
+    /*
+    * Just a quick hamburger
+    */
+    #mobileMenuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px; 
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+    }
+
+    #mobileMenuToggle span:first-child {
+    transform-origin: 0% 0%;
+    }
+
+    #mobileMenuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+    }
+
+    /* 
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    #mobileMenuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #fa8072;
+    }
+
+    /*
+    * But let's hide the middle one.
+    */
+    #mobileMenuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+    * Ohyeah and the last one should go the other direction
+    */
+    #mobileMenuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    #mobileMenuNav {
+    position: absolute;
+    width: 300px;
+    margin: 25px 0 0 55px;
+    padding: 60px;
+    padding-top: 100px;
+    text-align:right;
+    background: #000000;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #mobileMenuNav li {
+    padding: 10px 0;
+    font-size: 22px;
+
+    }
+    #mobileMenuNav a {
+        color:#ffffff;
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    #mobileMenuToggle input:checked ~ ul {
+    transform: none;
+    }
+}
+
+
+
+@media screen and (min-width:769px) {
     .mobile-menu {
         display:none;
-        position:absolute;
-        top:60px;
-        right:0;
-        width:100vw;
-        height:100vh;
-        background-color:black;
-        background-size: cover; 
-    }
-    .mobile-menu-icon:hover + .mobile-menu, 
-    .main-menu-section:hover {
-        display:block;
-    }
-
-
-
-
-
-    .mobile-menu li {
-        padding:50px 30px 0 0;
-        text-align:right;
-        list-style:none;
-    }
-    .mobile-menu li a {
-        color:#fff;
-        text-decoration:none;
-    }
-    .mobile-menu-icon {
-        width:40px;
-        width:40px;
     }
 }
-@media screen and (min-width:769px) {
-    .mobile-menu-section {
-        display:none;
-    }
-}
-
-
-

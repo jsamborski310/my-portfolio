@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio: Juanita Samborski</title>
+
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Portfolio: Juanita Samborski</title>
+    
 </head>
 <body>
     <!--Header-->
@@ -26,18 +29,24 @@
         </nav>
 
         <!--Mobile Menu-->
-        <div class="main-menu-section">
-            <img class="mobile-menu-icon" src="assets/images/mobile-menu-icon.svg"/>
 
-            <nav class="mobile-menu">
-                <ul>
+        <nav class="mobile-menu">
+            <div id="mobileMenuToggle">
+                <input type="checkbox"/>
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="mobileMenuNav">
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#">Resume</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
+
     </header>
 
 
@@ -50,9 +59,9 @@
     <!--Main Content-->
     <main>
         <!--About Me-->
-        <section id="about">
+        <section>
             <aside>
-                <h3>About</h3>
+                <h3><span id="about"></span>About</h3>
             </aside>
             <div class="right-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -60,9 +69,9 @@
         </section>
 
         <!--Work-->
-        <section id="work">
+        <section>
             <aside>
-                <h3>Work</h3>
+                <h3><span id="work"></span>Work</h3>
             </aside>
 
 
@@ -95,9 +104,9 @@
         </section>
         
         <!--Contact Me-->
-        <section id="contact">
+        <section>
             <aside>
-                <h3>Contact</h3>
+                <h3><span id="contact"></span>Contact</h3>
             </aside>
             <div class="right-content">
                 <ul>
