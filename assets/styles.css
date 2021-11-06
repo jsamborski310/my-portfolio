@@ -24,7 +24,7 @@ header h1 {
     padding:10px 10px 10px 50px;
 }
 
-li {
+.main-menu li {
     display:inline-block;
     text-transform: uppercase;
     font:100;
@@ -35,12 +35,12 @@ li {
 }
 
 
-li a {
+.main-menu li a {
     color:#ffffff;
     text-decoration:none;
 }
 
-li:hover a:after {
+.main-menu li:hover a:after {
     content: ""; /* This section animates the hover.*/
     display:block;
     position:absolute;
@@ -81,7 +81,7 @@ li a:hover {
 */
 
 
-ul {
+.main-menu ul {
     height: 20px; /*Keeps from moving up when hovered*/
     margin:20px 0;
 }
@@ -181,6 +181,66 @@ article h4 {
     }
     aside h3 {
         text-align: left;
+    }
+    .main-menu {
+        display:none;
+    }
+
+
+
+    /*MOBILE MENU*/
+    header {
+        position:relative;
+    }
+    .mobile-menu-icon {
+        display:flex;
+        justify-content: flex-end;
+        align-content:flex-end;
+        padding-right:30px;
+
+    }
+
+/*HOVER EFFECT*/
+
+    .main-menu-section {
+        position:relative;
+    }
+    .mobile-menu {
+        display:none;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:100vw;
+        height:100vh;
+        background-color:black;
+        background-size: cover; 
+    }
+    .mobile-menu-icon:hover + .mobile-menu, 
+    .main-menu-section:hover {
+        display:block;
+    }
+
+
+
+
+
+    .mobile-menu li {
+        padding:50px 30px 0 0;
+        text-align:right;
+        list-style:none;
+    }
+    .mobile-menu li a {
+        color:#fff;
+        text-decoration:none;
+    }
+    .mobile-menu-icon {
+        width:40px;
+        width:40px;
+    }
+}
+@media screen and (min-width:769px) {
+    .mobile-menu-section {
+        display:none;
     }
 }
 
