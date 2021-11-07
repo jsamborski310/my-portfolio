@@ -277,6 +277,9 @@ article h4 {
     .right-content ul li {
         padding-bottom:10px;
     }
+    article:not(:first-child) {
+        flex:1 0 100%; /*Full width on mobile.*/
+    }
 }
 
 /* MEDIA QUERY | 885px*/
