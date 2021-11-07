@@ -119,7 +119,7 @@ Adds hero background image. Positions Subtitle.*/
 
 .hero {
     height:400px;
-    background-image: url(/assets/images/coding-portfolio-background.png);
+    background-image: url("/assets/images/coding-portfolio-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
