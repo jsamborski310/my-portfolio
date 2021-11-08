@@ -33,8 +33,8 @@ GitHub Pages: https://jsamborski310.github.io/my-portfolio/
 
 Desktop View
 
-![Screen shot of portfolio desktop view.](./Samborski-Portfolio-DesktopVersion.png)
+![Screen shot of portfolio desktop view.](assets/images/Samborski-Portfolio-DesktopVersion.png)
 
 Mobile View
 
-![Screen shot of portfolio mobile view.](./Samborski-Portfolio-MobileVersion.png)
+![Screen shot of portfolio mobile view.](assets/images/Samborski-Portfolio-MobileVersion.png)
