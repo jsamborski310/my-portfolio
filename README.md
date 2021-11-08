@@ -37,4 +37,5 @@ Desktop View
 
 Mobile View
 
-![Screen shot of portfolio mobile view.](assets/images/Samborski-Portfolio-MobileVersion.png)
+<img src="assets/images/Samborski-Portfolio-MobileVersion.png" width="50%" height="auto" alt="Screen shot of portfolio mobile view.">
+
