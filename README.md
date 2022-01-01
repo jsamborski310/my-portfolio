@@ -1,5 +1,5 @@
 # Portfolio
-Portfolio of projects.
+Learn a bit more about me and the work I've accomplished.
 
 ## Overview
 
