@@ -148,7 +148,7 @@ section {
 }
 .right-content { /*Aligns content on right side*/
     flex:3;
-    padding: 0 0px 20px 20px;
+    padding: 0 0px 20px 50px;
 }
 
 /*WORK*/
@@ -280,6 +280,10 @@ article h4 {
     }
     .right-content ul li {
         padding-bottom:10px;
+    }
+    .right-content { 
+        flex:3;
+        padding: 0 0px 20px 20px;
     }
     article:not(:first-child) {
         flex:1 0 100%; /*Full width on mobile.*/
