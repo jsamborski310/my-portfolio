@@ -1,5 +1,5 @@
 # Portfolio
-Learn a bit more about me and the work I've accomplished.
+Learn a bit more about me and the work I've accomplished to date.
 
 ## Overview
 
